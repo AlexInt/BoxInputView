@@ -13,6 +13,13 @@
 		F791B482257DD6B2003C6FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F791B480257DD6B2003C6FD7 /* Main.storyboard */; };
 		F791B484257DD6B4003C6FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F791B483257DD6B4003C6FD7 /* Assets.xcassets */; };
 		F791B487257DD6B4003C6FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F791B485257DD6B4003C6FD7 /* LaunchScreen.storyboard */; };
+		F791B491257DD6E9003C6FD7 /* BoxFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B490257DD6E9003C6FD7 /* BoxFlowLayout.swift */; };
+		F791B495257DD703003C6FD7 /* BoxInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B494257DD703003C6FD7 /* BoxInputCell.swift */; };
+		F791B498257DD738003C6FD7 /* BoxInputCellProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B497257DD738003C6FD7 /* BoxInputCellProperty.swift */; };
+		F791B49B257DD751003C6FD7 /* BoxInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B49A257DD751003C6FD7 /* BoxInputView.swift */; };
+		F791B49E257DD771003C6FD7 /* BoxTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B49D257DD771003C6FD7 /* BoxTextView.swift */; };
+		F791B4A1257DD782003C6FD7 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B4A0257DD782003C6FD7 /* LineView.swift */; };
+		F791B4A4257DD791003C6FD7 /* SecrectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		F791B483257DD6B4003C6FD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F791B486257DD6B4003C6FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F791B488257DD6B4003C6FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F791B490257DD6E9003C6FD7 /* BoxFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxFlowLayout.swift; sourceTree = "<group>"; };
+		F791B494257DD703003C6FD7 /* BoxInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxInputCell.swift; sourceTree = "<group>"; };
+		F791B497257DD738003C6FD7 /* BoxInputCellProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxInputCellProperty.swift; sourceTree = "<group>"; };
+		F791B49A257DD751003C6FD7 /* BoxInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxInputView.swift; sourceTree = "<group>"; };
+		F791B49D257DD771003C6FD7 /* BoxTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTextView.swift; sourceTree = "<group>"; };
+		F791B4A0257DD782003C6FD7 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecrectImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +73,27 @@
 				F791B47A257DD6B2003C6FD7 /* AppDelegate.swift */,
 				F791B47C257DD6B2003C6FD7 /* SceneDelegate.swift */,
 				F791B47E257DD6B2003C6FD7 /* ViewController.swift */,
+				F791B48F257DD6CB003C6FD7 /* InputBoxView */,
 				F791B480257DD6B2003C6FD7 /* Main.storyboard */,
 				F791B483257DD6B4003C6FD7 /* Assets.xcassets */,
 				F791B485257DD6B4003C6FD7 /* LaunchScreen.storyboard */,
 				F791B488257DD6B4003C6FD7 /* Info.plist */,
 			);
 			path = "InputBoxView-demo";
+			sourceTree = "<group>";
+		};
+		F791B48F257DD6CB003C6FD7 /* InputBoxView */ = {
+			isa = PBXGroup;
+			children = (
+				F791B490257DD6E9003C6FD7 /* BoxFlowLayout.swift */,
+				F791B494257DD703003C6FD7 /* BoxInputCell.swift */,
+				F791B497257DD738003C6FD7 /* BoxInputCellProperty.swift */,
+				F791B49A257DD751003C6FD7 /* BoxInputView.swift */,
+				F791B49D257DD771003C6FD7 /* BoxTextView.swift */,
+				F791B4A0257DD782003C6FD7 /* LineView.swift */,
+				F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */,
+			);
+			path = InputBoxView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +166,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F791B495257DD703003C6FD7 /* BoxInputCell.swift in Sources */,
 				F791B47F257DD6B2003C6FD7 /* ViewController.swift in Sources */,
+				F791B491257DD6E9003C6FD7 /* BoxFlowLayout.swift in Sources */,
 				F791B47B257DD6B2003C6FD7 /* AppDelegate.swift in Sources */,
+				F791B49B257DD751003C6FD7 /* BoxInputView.swift in Sources */,
+				F791B4A1257DD782003C6FD7 /* LineView.swift in Sources */,
+				F791B49E257DD771003C6FD7 /* BoxTextView.swift in Sources */,
 				F791B47D257DD6B2003C6FD7 /* SceneDelegate.swift in Sources */,
+				F791B4A4257DD791003C6FD7 /* SecrectImageView.swift in Sources */,
+				F791B498257DD738003C6FD7 /* BoxInputCellProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
