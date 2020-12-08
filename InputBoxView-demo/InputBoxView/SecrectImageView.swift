@@ -32,7 +32,7 @@ class SecrectImageView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        super.init(frame: .zero)
+        super.init(coder: coder)
         createUI()
     }
     

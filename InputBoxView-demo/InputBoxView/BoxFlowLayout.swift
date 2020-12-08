@@ -11,9 +11,13 @@ class BoxFlowLayout: UICollectionViewFlowLayout {
     public var ifNeedEqualGap = true
     public var itemNum = 0
     public var minLineSpacing: CGFloat = 10
+    override init() {
+        super.init()
+        initPara()
+    }
     
     required init?(coder: NSCoder) {
-        super.init()
+        super.init(coder: coder)
         initPara()
     }
 }

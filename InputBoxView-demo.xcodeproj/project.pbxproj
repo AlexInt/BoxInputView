@@ -20,6 +20,7 @@
 		F791B49E257DD771003C6FD7 /* BoxTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B49D257DD771003C6FD7 /* BoxTextView.swift */; };
 		F791B4A1257DD782003C6FD7 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B4A0257DD782003C6FD7 /* LineView.swift */; };
 		F791B4A4257DD791003C6FD7 /* SecrectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */; };
+		F791B4AF257F2D59003C6FD7 /* Utiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791B4AE257F2D59003C6FD7 /* Utiles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F791B49D257DD771003C6FD7 /* BoxTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTextView.swift; sourceTree = "<group>"; };
 		F791B4A0257DD782003C6FD7 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecrectImageView.swift; sourceTree = "<group>"; };
+		F791B4AE257F2D59003C6FD7 /* Utiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utiles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				F791B49D257DD771003C6FD7 /* BoxTextView.swift */,
 				F791B4A0257DD782003C6FD7 /* LineView.swift */,
 				F791B4A3257DD791003C6FD7 /* SecrectImageView.swift */,
+				F791B4AE257F2D59003C6FD7 /* Utiles.swift */,
 			);
 			path = InputBoxView;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F791B495257DD703003C6FD7 /* BoxInputCell.swift in Sources */,
+				F791B4AF257F2D59003C6FD7 /* Utiles.swift in Sources */,
 				F791B47F257DD6B2003C6FD7 /* ViewController.swift in Sources */,
 				F791B491257DD6E9003C6FD7 /* BoxFlowLayout.swift in Sources */,
 				F791B47B257DD6B2003C6FD7 /* AppDelegate.swift in Sources */,

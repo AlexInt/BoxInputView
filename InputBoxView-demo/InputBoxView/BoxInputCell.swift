@@ -65,7 +65,7 @@ class BoxInputCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        super.init(frame: .zero)
+        super.init(coder: coder)
         createUIBase()
     }
     
