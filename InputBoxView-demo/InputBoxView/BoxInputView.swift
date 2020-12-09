@@ -34,7 +34,7 @@ class BoxInputView: UIView {
     var ifNeedCursor = true
     
     /// 验证码长度
-    public var codeLength: Int = 4 {
+    public private(set) var codeLength: Int {
         didSet {
             boxFlowLayout.itemNum = codeLength
         }
@@ -95,7 +95,7 @@ class BoxInputView: UIView {
         return layout
     }()
     
-    public var customCellProperty = BoxInputCellProperty()
+    private var customCellProperty: BoxInputCellProperty
     public var textValue: String {
         return textView.text ?? ""
     }
@@ -109,6 +109,7 @@ class BoxInputView: UIView {
     public lazy var mainCollectionView: UICollectionView = {
         let list  = UICollectionView(frame: .zero, collectionViewLayout: boxFlowLayout)
         list.showsHorizontalScrollIndicator = false
+        list.isScrollEnabled = false
         list.backgroundColor = .clear
         list.delegate = self
         list.dataSource = self
@@ -136,19 +137,32 @@ class BoxInputView: UIView {
     private var valueArr: [String] = []
     private var oldLength = 0
     private var ifNeedBeginEdit = false
+    
+    init(frame: CGRect = .zero, customCellProperty:BoxInputCellProperty, codeLength: Int = 4) {
+        self.customCellProperty = customCellProperty
+        self.codeLength = codeLength
+        super.init(frame:.zero)
+        initDefaultValue()
+        addNotificationObserver()
+    }
+    
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
+        self.customCellProperty = BoxInputCellProperty()
+        self.codeLength = 4
         super.init(coder: aDecoder)
         initDefaultValue()
         addNotificationObserver()
     }
     
-    //initWithFrame to init view from code
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        initDefaultValue()
-        addNotificationObserver()
+    convenience override init(frame: CGRect) {
+        self.init(frame:frame, customCellProperty: BoxInputCellProperty(), codeLength: 4)
     }
+    
+    convenience init() {
+        self.init(frame:.zero, customCellProperty: BoxInputCellProperty(), codeLength: 4)
+    }
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -391,7 +405,7 @@ extension BoxInputView {
     /// - Parameter inputStr: 输入内容
     /// - Returns: String
     private func filterInput(content inputStr: String) -> String {
-        let mutableStr = inputStr as! NSMutableString
+        let mutableStr = NSMutableString(string: inputStr)
         switch inputType {
         case .number:
             if let regex = try? NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive) {

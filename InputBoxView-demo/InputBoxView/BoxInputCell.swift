@@ -85,8 +85,9 @@ extension BoxInputCell {
                 lineView!.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             ])
         }
-        guard let cb = boxInputCellProperty.configCellShadowBlock else { fatalError("customLineViewBlock can not be null！") }
-        cb(layer)
+        if let cb = boxInputCellProperty.configCellShadowBlock {
+            cb(layer)
+        }
         super.layoutSubviews()
     }
 }

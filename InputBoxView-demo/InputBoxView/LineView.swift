@@ -36,6 +36,16 @@ class LineView: UIView {
     /// 选择状态改变时回调
     public var selectChangeBlock: LineViewSelectChangeBlock?
     
+    private var defaultLayoutConstraint: [NSLayoutConstraint] = []
+    public var customConstraint = false {
+        didSet {
+            guard customConstraint else {
+                return
+            }
+            NSLayoutConstraint.deactivate(defaultLayoutConstraint)
+            defaultLayoutConstraint.removeAll()
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         createUI()
@@ -49,12 +59,13 @@ class LineView: UIView {
     private func createUI() {
         lineView.backgroundColor = underlineColorNormal
         addSubview(lineView)
-        NSLayoutConstraint.activate([
+        defaultLayoutConstraint = [
             lineView.heightAnchor.constraint(equalToConstant: sepLineViewHeight),
             lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             lineView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-        ])
+        ]
+        NSLayoutConstraint.activate(defaultLayoutConstraint)
         
         lineView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor;
         lineView.layer.shadowOpacity = 1;
